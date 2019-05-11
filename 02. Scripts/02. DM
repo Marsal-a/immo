@@ -1,0 +1,9 @@
+dt_2014=fread(paste0(path_data,"valeursfoncieres-2014.txt.gz"),encoding = "UTF-8")
+dt_2015=fread(paste0(path_data,"valeursfoncieres-2015.txt.gz"),encoding = "UTF-8")
+dt_2016=fread(paste0(path_data,"valeursfoncieres-2016.txt.gz"),encoding = "UTF-8")
+dt_2017=fread(paste0(path_data,"valeursfoncieres-2017.txt.gz"),encoding = "UTF-8")
+dt_2018=fread(paste0(path_data,"valeursfoncieres-2018.txt.gz"),encoding = "UTF-8")
+
+dt_immo=rbindlist(list(dt_2014,dt_2015,dt_2016,dt_2017,dt_2018))
+
+dt_immo=dt_immo[,.()]
